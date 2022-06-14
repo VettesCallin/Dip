@@ -1,0 +1,108 @@
+﻿@page
+@model DipWeb.Pages.Переводы.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].КонтрольныйНомер)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].ИдентификаторСчетаБпкОтправителя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].ИдентификаторСчетаБпкПолучателя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].ИдентификаторТекущегоСчетаОтправителя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].ИдентификаторТекущегоСчетаПолучателя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].ИдентификаторЮридическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].ИдентификаторФизическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].ВидПеревода)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].ИдентификаторКодаВалюты)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].Сумма)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].Комиссия)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].ДатаПеревода)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Переводы[0].Статус)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Переводы) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.КонтрольныйНомер)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторСчетаБпкОтправителя)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторСчетаБпкПолучателя)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторТекущегоСчетаОтправителя)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторТекущегоСчетаПолучателя)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторФизическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ВидПеревода)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторКодаВалюты)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Сумма)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Комиссия)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаПеревода)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Статус)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторПеревода">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторПеревода">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторПеревода">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

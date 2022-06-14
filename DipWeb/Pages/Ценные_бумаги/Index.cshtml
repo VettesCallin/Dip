@@ -1,0 +1,108 @@
+﻿@page
+@model DipWeb.Pages.Ценные_бумаги.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].ВидЦеннойБумаги)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].ИдентификаторЮридическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].ИдентификаторФизическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].Серия)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].Номер)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].ИдентификаторКодаВалюты)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].Номинал)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].ПроцентнаяСтавка)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].ДатаЗаключения)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].ПериодРазмещения)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].ПериодПогашения)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].КонечнаяДатаРеализации)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЦенныеБумаги[0].ГарантПогашения)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ЦенныеБумаги) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ВидЦеннойБумаги)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторФизическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Серия)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Номер)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторКодаВалюты)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Номинал)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПроцентнаяСтавка)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаЗаключения)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПериодРазмещения)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПериодПогашения)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КонечнаяДатаРеализации)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ГарантПогашения)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторЦеннойБумаги">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторЦеннойБумаги">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторЦеннойБумаги">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

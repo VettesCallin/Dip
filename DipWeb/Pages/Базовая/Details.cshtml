@@ -1,0 +1,31 @@
+﻿@page
+@model DipWeb.Pages.Базовая_величина.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>БазоваяВеличина</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БазоваяВеличина.ЗначениеБВ)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БазоваяВеличина.ЗначениеБВ)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БазоваяВеличина.ДатаПринятия)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БазоваяВеличина.ДатаПринятия)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.БазоваяВеличина?.ИдентификаторБазовойВеличины">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

@@ -1,0 +1,88 @@
+﻿@page
+@model DipWeb.Pages.Страхование.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Удалить запись?</h3>
+<div>
+    <h4>Страхование</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Страхование.ВидСтрахования)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Страхование.ВидСтрахования)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Страхование.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Страхование.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Страхование.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Страхование.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Страхование.СрокСтрахования)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Страхование.СрокСтрахования)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Страхование.ДатаЗаключения)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Страхование.ДатаЗаключения)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Страхование.ДатаОкончания)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Страхование.ДатаОкончания)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Страхование.Сумма)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Страхование.Сумма)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Страхование.СтраховойТариф)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Страхование.СтраховойТариф)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Страхование.ПериодыУплаты)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Страхование.ПериодыУплаты)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Страхование.КомиссионноеВознаграждение)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Страхование.КомиссионноеВознаграждение)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Страхование.БонуснаяПрограмма)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Страхование.БонуснаяПрограмма)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Страхование.ИдентификаторСтрахования" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться</a>
+    </form>
+</div>

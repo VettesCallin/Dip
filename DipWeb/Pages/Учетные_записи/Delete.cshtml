@@ -1,0 +1,52 @@
+﻿@page
+@model DipWeb.Pages.Учетные_записи.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Удалить запись?</h3>
+<div>
+    <h4>УчетныеЗаписи</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.УчетныеЗаписи.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.УчетныеЗаписи.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.УчетныеЗаписи.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.УчетныеЗаписи.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.УчетныеЗаписи.Логин)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.УчетныеЗаписи.Логин)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.УчетныеЗаписи.Пароль)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.УчетныеЗаписи.Пароль)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.УчетныеЗаписи.ДатаСозданияУчетнойЗаписи)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.УчетныеЗаписи.ДатаСозданияУчетнойЗаписи)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="УчетныеЗаписи.ИдентификаторУчетнойЗаписи" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться</a>
+    </form>
+</div>

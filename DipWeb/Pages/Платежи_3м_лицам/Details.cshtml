@@ -1,0 +1,103 @@
+﻿@page
+@model DipWeb.Pages.Платежи_3м_лицам.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>Платежи_3м_лицам</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.ИдентификаторБПК)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.ИдентификаторБПК)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.НомерПлательщикаЕРИП)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.НомерПлательщикаЕРИП)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.НомерУслугиЕРИП)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.НомерУслугиЕРИП)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.НомерОперацииЕРИП)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.НомерОперацииЕРИП)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.ИдентификаторКодаВалюты)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.ИдентификаторКодаВалюты)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.Сумма)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.Сумма)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.Комиссия)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.Комиссия)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.ДатаПлатежа)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.ДатаПлатежа)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.Назначение)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.Назначение)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.ПолучательПлатежа)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.ПолучательПлатежа)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.УнпПолучателя)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.УнпПолучателя)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Платежи_3м_лицам.РСчетПолучателя)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Платежи_3м_лицам.РСчетПолучателя)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Платежи_3м_лицам?.ИдентификаторПлатежа3мЛицам">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

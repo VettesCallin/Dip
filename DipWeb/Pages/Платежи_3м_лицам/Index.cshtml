@@ -1,0 +1,114 @@
+﻿@page
+@model DipWeb.Pages.Платежи_3м_лицам.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].ИдентификаторБПК)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].ИдентификаторЮридическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].ИдентификаторФизическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].НомерПлательщикаЕРИП)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].НомерУслугиЕРИП)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].НомерОперацииЕРИП)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].ИдентификаторКодаВалюты)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].Сумма)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].Комиссия)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].ДатаПлатежа)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].Назначение)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].ПолучательПлатежа)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].УнпПолучателя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Платежи_3м_лицам[0].РСчетПолучателя)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Платежи_3м_лицам) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторБПК)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторФизическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерПлательщикаЕРИП)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерУслугиЕРИП)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерОперацииЕРИП)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторКодаВалюты)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Сумма)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Комиссия)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаПлатежа)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Назначение)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПолучательПлатежа)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.УнпПолучателя)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.РСчетПолучателя)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторПлатежа3мЛицам">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторПлатежа3мЛицам">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторПлатежа3мЛицам">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

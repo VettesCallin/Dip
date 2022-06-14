@@ -1,0 +1,54 @@
+﻿@page
+@model DipWeb.Pages.Валюты.DeleteModel
+@{
+}
+
+<form method="post">
+	<input hidden asp-for="Валюта.ИдентификаторКодаВалюты" />
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary pl-3">Удалить валюту</h2>
+			<hr />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КодВалюты"></label>
+			<input asp-for="Валюта.КодВалюты" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.Наименование"></label>
+			<input asp-for="Валюта.Наименование" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.Страна"></label>
+			<input asp-for="Валюта.Страна" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КурсНБ"></label>
+			<input asp-for="Валюта.КурсНБ" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КурсБанкаПокупкиНал"></label>
+			<input asp-for="Валюта.КурсБанкаПокупкиНал" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КурсБанкаПокупкиБезнал"></label>
+			<input asp-for="Валюта.КурсБанкаПокупкиБезнал" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КурсБанкаПродажиНал"></label>
+			<input asp-for="Валюта.КурсБанкаПродажиНал" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КурсБанкаПродажиБезнал"></label>
+			<input asp-for="Валюта.КурсБанкаПродажиБезнал" disabled class="form-control" />
+		</div>
+		<button type="submit" class="byn btn-danger" style="width:150px;">Удалить</button>
+		<a asp-page="Index" class="btn btn-secondary" style="width:150px;">Вернуться</a>
+	</div>
+</form>
+
+@section Scripts {
+	@{
+		<partial name="_ValidationScriptsPartial"/>
+	}
+}

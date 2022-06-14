@@ -1,0 +1,127 @@
+﻿@page
+@model DipWeb.Pages.Физические_лица.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>ФизическиеЛица</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.Фамилия)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.Фамилия)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.Имя)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.Имя)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.Отчество)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.Отчество)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.Пол)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.Пол)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.Гражданство)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.Гражданство)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.ДатаРождения)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.ДатаРождения)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.НазваниеДокумента)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.НазваниеДокумента)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.СерияДокумента)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.СерияДокумента)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.НомерДокумента)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.НомерДокумента)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.ДатаВыдачи)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.ДатаВыдачи)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.ДатаОкончания)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.ДатаОкончания)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.ОрганВыдавшийДокумент)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.ОрганВыдавшийДокумент)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.ИдентификационныйНомер)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.ИдентификационныйНомер)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.ИдентификаторАдресаРегистрации)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.ИдентификаторАдресаРегистрации)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.ИдентификаторАдресаПрописки)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.ИдентификаторАдресаПрописки)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.МестоРаботы)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.МестоРаботы)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ФизическиеЛица.Информация)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ФизическиеЛица.Информация)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ФизическиеЛица?.ИдентификаторФизическогоЛица">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

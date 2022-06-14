@@ -1,0 +1,69 @@
+﻿@page
+@model DipWeb.Pages.Валюты.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Валюта</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Валюта.КодВалюты" class="control-label"></label>
+                <input asp-for="Валюта.КодВалюты" class="form-control" />
+                <span asp-validation-for="Валюта.КодВалюты" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Валюта.Наименование" class="control-label"></label>
+                <input asp-for="Валюта.Наименование" class="form-control" />
+                <span asp-validation-for="Валюта.Наименование" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Валюта.Страна" class="control-label"></label>
+                <input asp-for="Валюта.Страна" class="form-control" />
+                <span asp-validation-for="Валюта.Страна" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Валюта.КурсНБ" class="control-label"></label>
+                <input asp-for="Валюта.КурсНБ" class="form-control" />
+                <span asp-validation-for="Валюта.КурсНБ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Валюта.КурсБанкаПокупкиНал" class="control-label"></label>
+                <input asp-for="Валюта.КурсБанкаПокупкиНал" class="form-control" />
+                <span asp-validation-for="Валюта.КурсБанкаПокупкиНал" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Валюта.КурсБанкаПокупкиБезнал" class="control-label"></label>
+                <input asp-for="Валюта.КурсБанкаПокупкиБезнал" class="form-control" />
+                <span asp-validation-for="Валюта.КурсБанкаПокупкиБезнал" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Валюта.КурсБанкаПродажиНал" class="control-label"></label>
+                <input asp-for="Валюта.КурсБанкаПродажиНал" class="form-control" />
+                <span asp-validation-for="Валюта.КурсБанкаПродажиНал" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Валюта.КурсБанкаПродажиБезнал" class="control-label"></label>
+                <input asp-for="Валюта.КурсБанкаПродажиБезнал" class="form-control" />
+                <span asp-validation-for="Валюта.КурсБанкаПродажиБезнал" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,132 @@
+﻿@page
+@model DipWeb.Pages.Кредитование.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].НомерКредитногоДоговора)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].ИдентификаторЮридическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].ИдентификаторФизическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].ВидКредита)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].ПроцентнаяСтавка)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].Срок)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].ОбщаяСумма)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].СуммаЕжемесячныхПлатежей)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].ДатаОформления)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].ПериодПогашения)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].КонечнаяДатаКредита)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].СрокКредитнойЛинии)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].Пеня)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].ШтрафныеCанкции)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].Обеспечение)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].СуммаОбеспечения)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Кредитование[0].Статус)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Кредитование) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерКредитногоДоговора)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторФизическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ВидКредита)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПроцентнаяСтавка)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Срок)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ОбщаяСумма)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СуммаЕжемесячныхПлатежей)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаОформления)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПериодПогашения)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КонечнаяДатаКредита)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СрокКредитнойЛинии)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Пеня)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ШтрафныеCанкции)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Обеспечение)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СуммаОбеспечения)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Статус)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторКредитования">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторКредитования">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторКредитования">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

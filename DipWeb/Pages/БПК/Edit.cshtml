@@ -1,0 +1,105 @@
+﻿@page
+@model DipWeb.Pages.БПК.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<h4>БПК</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="БПК.ИдентификаторБПК" />
+            <div class="form-group">
+                <label asp-for="БПК.ВидПлатежнойСистемы" class="control-label"></label>
+                <input asp-for="БПК.ВидПлатежнойСистемы" class="form-control" />
+                <span asp-validation-for="БПК.ВидПлатежнойСистемы" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.ВидБПК" class="control-label"></label>
+                <input asp-for="БПК.ВидБПК" class="form-control" />
+                <span asp-validation-for="БПК.ВидБПК" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.ИдентификаторСчетаБПК" class="control-label"></label>
+                <input asp-for="БПК.ИдентификаторСчетаБПК" class="form-control" />
+                <span asp-validation-for="БПК.ИдентификаторСчетаБПК" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.ИдентификаторКодаВалюты" class="control-label"></label>
+                <input asp-for="БПК.ИдентификаторКодаВалюты" class="form-control" />
+                <span asp-validation-for="БПК.ИдентификаторКодаВалюты" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.СрокДействия" class="control-label"></label>
+                <input asp-for="БПК.СрокДействия" class="form-control" />
+                <span asp-validation-for="БПК.СрокДействия" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.НомерКарты" class="control-label"></label>
+                <input asp-for="БПК.НомерКарты" class="form-control" />
+                <span asp-validation-for="БПК.НомерКарты" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.НаименованиеОрганизации" class="control-label"></label>
+                <input asp-for="БПК.НаименованиеОрганизации" class="form-control" />
+                <span asp-validation-for="БПК.НаименованиеОрганизации" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.ДанныеДержателя" class="control-label"></label>
+                <input asp-for="БПК.ДанныеДержателя" class="form-control" />
+                <span asp-validation-for="БПК.ДанныеДержателя" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.КодCVV" class="control-label"></label>
+                <input asp-for="БПК.КодCVV" class="form-control" />
+                <span asp-validation-for="БПК.КодCVV" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.PIN" class="control-label"></label>
+                <input asp-for="БПК.PIN" class="form-control" />
+                <span asp-validation-for="БПК.PIN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.ДатаDыпуска" class="control-label"></label>
+                <input asp-for="БПК.ДатаDыпуска" class="form-control" />
+                <span asp-validation-for="БПК.ДатаDыпуска" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.ДатаИстечения" class="control-label"></label>
+                <input asp-for="БПК.ДатаИстечения" class="form-control" />
+                <span asp-validation-for="БПК.ДатаИстечения" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.БонуснаяПрограмма" class="control-label"></label>
+                <input asp-for="БПК.БонуснаяПрограмма" class="form-control" />
+                <span asp-validation-for="БПК.БонуснаяПрограмма" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="БПК.Заготовка" /> @Html.DisplayNameFor(model => model.БПК.Заготовка)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="БПК.Состояние" class="control-label"></label>
+                <input asp-for="БПК.Состояние" class="form-control" />
+                <span asp-validation-for="БПК.Состояние" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

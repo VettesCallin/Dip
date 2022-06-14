@@ -1,0 +1,66 @@
+﻿@page
+@model DipWeb.Pages.Погашения_кредитов.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ПогашенияКредитов[0].ИдентификаторКредитования)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ПогашенияКредитов[0].НомерКредитногоДоговора)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ПогашенияКредитов[0].ИдентификаторЮридическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ПогашенияКредитов[0].ИдентификаторФизическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ПогашенияКредитов[0].Сумма)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ПогашенияКредитов[0].ДатаПлатежа)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ПогашенияКредитов) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторКредитования)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерКредитногоДоговора)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторФизическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Сумма)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаПлатежа)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторПогашения">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторПогашения">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторПогашения">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

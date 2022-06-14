@@ -1,0 +1,54 @@
+﻿@page
+@model DipWeb.Pages.Учетные_записи.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>УчетныеЗаписи</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="УчетныеЗаписи.ИдентификаторЮридическогоЛица" class="control-label"></label>
+                <input asp-for="УчетныеЗаписи.ИдентификаторЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="УчетныеЗаписи.ИдентификаторЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="УчетныеЗаписи.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="УчетныеЗаписи.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="УчетныеЗаписи.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="УчетныеЗаписи.Логин" class="control-label"></label>
+                <input asp-for="УчетныеЗаписи.Логин" class="form-control" />
+                <span asp-validation-for="УчетныеЗаписи.Логин" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="УчетныеЗаписи.Пароль" class="control-label"></label>
+                <input asp-for="УчетныеЗаписи.Пароль" class="form-control" />
+                <span asp-validation-for="УчетныеЗаписи.Пароль" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="УчетныеЗаписи.ДатаСозданияУчетнойЗаписи" class="control-label"></label>
+                <input asp-for="УчетныеЗаписи.ДатаСозданияУчетнойЗаписи" class="form-control" />
+                <span asp-validation-for="УчетныеЗаписи.ДатаСозданияУчетнойЗаписи" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

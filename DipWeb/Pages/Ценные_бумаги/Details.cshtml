@@ -1,0 +1,97 @@
+﻿@page
+@model DipWeb.Pages.Ценные_бумаги.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>ЦенныеБумаги</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.ВидЦеннойБумаги)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.ВидЦеннойБумаги)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.Серия)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.Серия)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.Номер)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.Номер)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.ИдентификаторКодаВалюты)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.ИдентификаторКодаВалюты)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.Номинал)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.Номинал)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.ПроцентнаяСтавка)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.ПроцентнаяСтавка)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.ДатаЗаключения)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.ДатаЗаключения)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.ПериодРазмещения)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.ПериодРазмещения)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.ПериодПогашения)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.ПериодПогашения)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.КонечнаяДатаРеализации)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.КонечнаяДатаРеализации)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЦенныеБумаги.ГарантПогашения)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЦенныеБумаги.ГарантПогашения)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ЦенныеБумаги?.ИдентификаторЦеннойБумаги">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

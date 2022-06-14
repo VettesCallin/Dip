@@ -1,0 +1,59 @@
+﻿@page
+@model DipWeb.Pages.Телефоны.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>Телефон</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Телефон.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="Телефон.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="Телефон.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Телефон.Оператор" class="control-label"></label>
+                <input asp-for="Телефон.Оператор" class="form-control" />
+                <span asp-validation-for="Телефон.Оператор" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Телефон.КодCтраны" class="control-label"></label>
+                <input asp-for="Телефон.КодCтраны" class="form-control" />
+                <span asp-validation-for="Телефон.КодCтраны" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Телефон.КодОператора" class="control-label"></label>
+                <input asp-for="Телефон.КодОператора" class="form-control" />
+                <span asp-validation-for="Телефон.КодОператора" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Телефон.НомерТелефона" class="control-label"></label>
+                <input asp-for="Телефон.НомерТелефона" class="form-control" />
+                <span asp-validation-for="Телефон.НомерТелефона" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Телефон.Детали" class="control-label"></label>
+                <input asp-for="Телефон.Детали" class="form-control" />
+                <span asp-validation-for="Телефон.Детали" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

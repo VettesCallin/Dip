@@ -1,0 +1,84 @@
+﻿@page
+@model DipWeb.Pages.Страхование.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>Страхование</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Страхование.ВидСтрахования" class="control-label"></label>
+                <input asp-for="Страхование.ВидСтрахования" class="form-control" />
+                <span asp-validation-for="Страхование.ВидСтрахования" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Страхование.ИдентификаторЮридическогоЛица" class="control-label"></label>
+                <input asp-for="Страхование.ИдентификаторЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="Страхование.ИдентификаторЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Страхование.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="Страхование.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="Страхование.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Страхование.СрокСтрахования" class="control-label"></label>
+                <input asp-for="Страхование.СрокСтрахования" class="form-control" />
+                <span asp-validation-for="Страхование.СрокСтрахования" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Страхование.ДатаЗаключения" class="control-label"></label>
+                <input asp-for="Страхование.ДатаЗаключения" class="form-control" />
+                <span asp-validation-for="Страхование.ДатаЗаключения" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Страхование.ДатаОкончания" class="control-label"></label>
+                <input asp-for="Страхование.ДатаОкончания" class="form-control" />
+                <span asp-validation-for="Страхование.ДатаОкончания" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Страхование.Сумма" class="control-label"></label>
+                <input asp-for="Страхование.Сумма" class="form-control" />
+                <span asp-validation-for="Страхование.Сумма" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Страхование.СтраховойТариф" class="control-label"></label>
+                <input asp-for="Страхование.СтраховойТариф" class="form-control" />
+                <span asp-validation-for="Страхование.СтраховойТариф" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Страхование.ПериодыУплаты" class="control-label"></label>
+                <input asp-for="Страхование.ПериодыУплаты" class="form-control" />
+                <span asp-validation-for="Страхование.ПериодыУплаты" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Страхование.КомиссионноеВознаграждение" class="control-label"></label>
+                <input asp-for="Страхование.КомиссионноеВознаграждение" class="form-control" />
+                <span asp-validation-for="Страхование.КомиссионноеВознаграждение" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Страхование.БонуснаяПрограмма" class="control-label"></label>
+                <input asp-for="Страхование.БонуснаяПрограмма" class="form-control" />
+                <span asp-validation-for="Страхование.БонуснаяПрограмма" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

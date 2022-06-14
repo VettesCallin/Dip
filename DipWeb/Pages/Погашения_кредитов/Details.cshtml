@@ -1,0 +1,55 @@
+﻿@page
+@model DipWeb.Pages.Погашения_кредитов.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>ПогашенияКредитов</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ПогашенияКредитов.ИдентификаторКредитования)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ПогашенияКредитов.ИдентификаторКредитования)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ПогашенияКредитов.НомерКредитногоДоговора)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ПогашенияКредитов.НомерКредитногоДоговора)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ПогашенияКредитов.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ПогашенияКредитов.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ПогашенияКредитов.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ПогашенияКредитов.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ПогашенияКредитов.Сумма)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ПогашенияКредитов.Сумма)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ПогашенияКредитов.ДатаПлатежа)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ПогашенияКредитов.ДатаПлатежа)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ПогашенияКредитов?.ИдентификаторПогашения">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

@@ -1,0 +1,138 @@
+﻿@page
+@model DipWeb.Pages.Физические_лица.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].Фамилия)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].Имя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].Отчество)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].Пол)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].Гражданство)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].ДатаРождения)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].НазваниеДокумента)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].СерияДокумента)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].НомерДокумента)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].ДатаВыдачи)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].ДатаОкончания)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].ОрганВыдавшийДокумент)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].ИдентификационныйНомер)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].ИдентификаторАдресаРегистрации)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].ИдентификаторАдресаПрописки)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].МестоРаботы)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ФизическиеЛица[0].Информация)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ФизическиеЛица) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Фамилия)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Имя)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Отчество)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Пол)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Гражданство)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаРождения)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НазваниеДокумента)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СерияДокумента)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерДокумента)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаВыдачи)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаОкончания)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ОрганВыдавшийДокумент)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификационныйНомер)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторАдресаРегистрации)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторАдресаПрописки)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.МестоРаботы)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Информация)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторФизическогоЛица">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторФизическогоЛица">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторФизическогоЛица">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

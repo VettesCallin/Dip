@@ -1,0 +1,95 @@
+﻿@page
+@model DipWeb.Pages.Ценные_бумаги.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<h4>ЦенныеБумаги</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ЦенныеБумаги.ИдентификаторЦеннойБумаги" />
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.ВидЦеннойБумаги" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.ВидЦеннойБумаги" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.ВидЦеннойБумаги" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.ИдентификаторЮридическогоЛица" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.ИдентификаторЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.ИдентификаторЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.Серия" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.Серия" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.Серия" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.Номер" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.Номер" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.Номер" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.ИдентификаторКодаВалюты" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.ИдентификаторКодаВалюты" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.ИдентификаторКодаВалюты" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.Номинал" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.Номинал" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.Номинал" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.ПроцентнаяСтавка" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.ПроцентнаяСтавка" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.ПроцентнаяСтавка" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.ДатаЗаключения" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.ДатаЗаключения" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.ДатаЗаключения" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.ПериодРазмещения" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.ПериодРазмещения" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.ПериодРазмещения" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.ПериодПогашения" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.ПериодПогашения" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.ПериодПогашения" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.КонечнаяДатаРеализации" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.КонечнаяДатаРеализации" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.КонечнаяДатаРеализации" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЦенныеБумаги.ГарантПогашения" class="control-label"></label>
+                <input asp-for="ЦенныеБумаги.ГарантПогашения" class="form-control" />
+                <span asp-validation-for="ЦенныеБумаги.ГарантПогашения" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

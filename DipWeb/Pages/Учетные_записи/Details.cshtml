@@ -1,0 +1,49 @@
+﻿@page
+@model DipWeb.Pages.Учетные_записи.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>УчетныеЗаписи</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.УчетныеЗаписи.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.УчетныеЗаписи.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.УчетныеЗаписи.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.УчетныеЗаписи.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.УчетныеЗаписи.Логин)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.УчетныеЗаписи.Логин)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.УчетныеЗаписи.Пароль)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.УчетныеЗаписи.Пароль)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.УчетныеЗаписи.ДатаСозданияУчетнойЗаписи)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.УчетныеЗаписи.ДатаСозданияУчетнойЗаписи)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.УчетныеЗаписи?.ИдентификаторУчетнойЗаписи">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

@@ -1,0 +1,70 @@
+﻿@page
+@model DipWeb.Pages.Счета_БПК.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Удалить запись?</h3>
+<div>
+    <h4>СчетаБПК</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.СчетаБПК.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.СчетаБПК.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.СчетаБПК.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.СчетаБПК.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.СчетаБПК.ИдентификаторКодаВалюты)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.СчетаБПК.ИдентификаторКодаВалюты)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.СчетаБПК.ПроцентнаяСтавка)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.СчетаБПК.ПроцентнаяСтавка)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.СчетаБПК.Сумма)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.СчетаБПК.Сумма)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.СчетаБПК.КапитализацияПроцентов)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.СчетаБПК.КапитализацияПроцентов)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.СчетаБПК.ДатаОткрытия)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.СчетаБПК.ДатаОткрытия)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.СчетаБПК.ДатаЗакрытия)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.СчетаБПК.ДатаЗакрытия)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="СчетаБПК.ИдентификаторСчетаБПК" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться</a>
+    </form>
+</div>

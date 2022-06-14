@@ -1,0 +1,61 @@
+﻿@page
+@model DipWeb.Pages.Валюты.CreateModel
+@{
+}
+
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary pl-3">Добавить валюту</h2>
+			<hr />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КодВалюты"></label>
+			<input asp-for="Валюта.КодВалюты" class="form-control" />
+			<span asp-validation-for="Валюта.КодВалюты" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.Наименование"></label>
+			<input asp-for="Валюта.Наименование" class="form-control" />
+			<span asp-validation-for="Валюта.Наименование" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.Страна"></label>
+			<input asp-for="Валюта.Страна" class="form-control" />
+			<span asp-validation-for="Валюта.Страна" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КурсНБ"></label>
+			<input asp-for="Валюта.КурсНБ" class="form-control" />
+			<span asp-validation-for="Валюта.КурсНБ" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КурсБанкаПокупкиНал"></label>
+			<input asp-for="Валюта.КурсБанкаПокупкиНал" class="form-control" />
+			<span asp-validation-for="Валюта.КурсБанкаПокупкиНал" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КурсБанкаПокупкиБезнал"></label>
+			<input asp-for="Валюта.КурсБанкаПокупкиБезнал" class="form-control" />
+			<span asp-validation-for="Валюта.КурсБанкаПокупкиБезнал" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КурсБанкаПродажиНал"></label>
+			<input asp-for="Валюта.КурсБанкаПродажиНал" class="form-control" />
+			<span asp-validation-for="Валюта.КурсБанкаПродажиНал" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Валюта.КурсБанкаПродажиБезнал"></label>
+			<input asp-for="Валюта.КурсБанкаПродажиБезнал" class="form-control" />
+			<span asp-validation-for="Валюта.КурсБанкаПродажиБезнал" class="text-danger"></span>
+		</div>
+		<button type="submit" class="byn btn-primary" style="width:150px;">Добавить</button>
+		<a asp-page="Index" class="btn btn-secondary" style="width:150px;">Вернуться</a>
+	</div>
+</form>
+
+@section Scripts {
+	@{
+	<partial name="_ValidationScriptsPartial"/>
+	}
+}

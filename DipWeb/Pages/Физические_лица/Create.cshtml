@@ -1,0 +1,119 @@
+﻿@page
+@model DipWeb.Pages.Физические_лица.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>ФизическиеЛица</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.Фамилия" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.Фамилия" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.Фамилия" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.Имя" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.Имя" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.Имя" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.Отчество" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.Отчество" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.Отчество" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.Пол" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.Пол" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.Пол" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.Гражданство" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.Гражданство" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.Гражданство" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.ДатаРождения" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.ДатаРождения" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.ДатаРождения" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.НазваниеДокумента" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.НазваниеДокумента" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.НазваниеДокумента" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.СерияДокумента" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.СерияДокумента" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.СерияДокумента" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.НомерДокумента" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.НомерДокумента" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.НомерДокумента" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.ДатаВыдачи" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.ДатаВыдачи" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.ДатаВыдачи" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.ДатаОкончания" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.ДатаОкончания" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.ДатаОкончания" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.ОрганВыдавшийДокумент" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.ОрганВыдавшийДокумент" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.ОрганВыдавшийДокумент" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.ИдентификационныйНомер" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.ИдентификационныйНомер" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.ИдентификационныйНомер" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.ИдентификаторАдресаРегистрации" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.ИдентификаторАдресаРегистрации" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.ИдентификаторАдресаРегистрации" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.ИдентификаторАдресаПрописки" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.ИдентификаторАдресаПрописки" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.ИдентификаторАдресаПрописки" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.Email" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.Email" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.МестоРаботы" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.МестоРаботы" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.МестоРаботы" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ФизическиеЛица.Информация" class="control-label"></label>
+                <input asp-for="ФизическиеЛица.Информация" class="form-control" />
+                <span asp-validation-for="ФизическиеЛица.Информация" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

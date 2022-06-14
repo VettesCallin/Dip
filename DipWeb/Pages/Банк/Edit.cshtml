@@ -1,0 +1,70 @@
+﻿@page
+@model DipWeb.Pages.Банк.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<h4>Банк</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Банк.ИдентификаторБанка" />
+            <div class="form-group">
+                <label asp-for="Банк.Наименование" class="control-label"></label>
+                <input asp-for="Банк.Наименование" class="form-control" />
+                <span asp-validation-for="Банк.Наименование" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Банк.КодБанка" class="control-label"></label>
+                <input asp-for="Банк.КодБанка" class="form-control" />
+                <span asp-validation-for="Банк.КодБанка" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Банк.УнпБанка" class="control-label"></label>
+                <input asp-for="Банк.УнпБанка" class="form-control" />
+                <span asp-validation-for="Банк.УнпБанка" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Банк.БикБанка" class="control-label"></label>
+                <input asp-for="Банк.БикБанка" class="form-control" />
+                <span asp-validation-for="Банк.БикБанка" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Банк.РСчет" class="control-label"></label>
+                <input asp-for="Банк.РСчет" class="form-control" />
+                <span asp-validation-for="Банк.РСчет" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Банк.ИдентификаторЮридическогоАдреса" class="control-label"></label>
+                <input asp-for="Банк.ИдентификаторЮридическогоАдреса" class="form-control" />
+                <span asp-validation-for="Банк.ИдентификаторЮридическогоАдреса" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Банк.ИдентификаторТелефона" class="control-label"></label>
+                <input asp-for="Банк.ИдентификаторТелефона" class="form-control" />
+                <span asp-validation-for="Банк.ИдентификаторТелефона" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Банк.Детали" class="control-label"></label>
+                <input asp-for="Банк.Детали" class="form-control" />
+                <span asp-validation-for="Банк.Детали" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

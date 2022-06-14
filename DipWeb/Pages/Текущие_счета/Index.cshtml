@@ -1,0 +1,72 @@
+﻿@page
+@model DipWeb.Pages.Текущие_счета.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ТекущиеСчета[0].ИдентификаторЮридическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ТекущиеСчета[0].ИдентификаторФизическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ТекущиеСчета[0].ИдентификаторКодаВалюты)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ТекущиеСчета[0].Сумма)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ТекущиеСчета[0].ПроцентнаяСтавка)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ТекущиеСчета[0].КапитализацияПроцентов)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ТекущиеСчета[0].ДатаЗакрытия)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ТекущиеСчета) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторФизическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторКодаВалюты)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Сумма)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПроцентнаяСтавка)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КапитализацияПроцентов)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаЗакрытия)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторТекущегоСчета">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторТекущегоСчета">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторТекущегоСчета">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

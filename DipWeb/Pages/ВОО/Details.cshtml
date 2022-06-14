@@ -1,0 +1,73 @@
+﻿@page
+@model DipWeb.Pages.ВОО.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>ВОО</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ВОО.ТипВОО)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ВОО.ТипВОО)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ВОО.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ВОО.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ВОО.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ВОО.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ВОО.ИдентификаторБанка)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ВОО.ИдентификаторБанка)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ВОО.ИдентификаторКодаВалюты1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ВОО.ИдентификаторКодаВалюты1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ВОО.ИдентификаторКодаВалюты2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ВОО.ИдентификаторКодаВалюты2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ВОО.Сумма)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ВОО.Сумма)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ВОО.Моржа)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ВОО.Моржа)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ВОО.Дата)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ВОО.Дата)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ВОО?.ИдентификаторВОО">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

@@ -1,0 +1,96 @@
+﻿@page
+@model DipWeb.Pages.Страхование.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Страхование[0].ВидСтрахования)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Страхование[0].ИдентификаторЮридическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Страхование[0].ИдентификаторФизическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Страхование[0].СрокСтрахования)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Страхование[0].ДатаЗаключения)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Страхование[0].ДатаОкончания)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Страхование[0].Сумма)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Страхование[0].СтраховойТариф)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Страхование[0].ПериодыУплаты)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Страхование[0].КомиссионноеВознаграждение)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Страхование[0].БонуснаяПрограмма)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Страхование) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ВидСтрахования)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторФизическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СрокСтрахования)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаЗаключения)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаОкончания)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Сумма)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СтраховойТариф)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПериодыУплаты)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КомиссионноеВознаграждение)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.БонуснаяПрограмма)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторСтрахования">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторСтрахования">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторСтрахования">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

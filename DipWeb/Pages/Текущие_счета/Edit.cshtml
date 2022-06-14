@@ -1,0 +1,65 @@
+﻿@page
+@model DipWeb.Pages.Текущие_счета.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<h4>ТекущиеСчета</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ТекущиеСчета.ИдентификаторТекущегоСчета" />
+            <div class="form-group">
+                <label asp-for="ТекущиеСчета.ИдентификаторЮридическогоЛица" class="control-label"></label>
+                <input asp-for="ТекущиеСчета.ИдентификаторЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="ТекущиеСчета.ИдентификаторЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ТекущиеСчета.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="ТекущиеСчета.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="ТекущиеСчета.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ТекущиеСчета.ИдентификаторКодаВалюты" class="control-label"></label>
+                <input asp-for="ТекущиеСчета.ИдентификаторКодаВалюты" class="form-control" />
+                <span asp-validation-for="ТекущиеСчета.ИдентификаторКодаВалюты" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ТекущиеСчета.Сумма" class="control-label"></label>
+                <input asp-for="ТекущиеСчета.Сумма" class="form-control" />
+                <span asp-validation-for="ТекущиеСчета.Сумма" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ТекущиеСчета.ПроцентнаяСтавка" class="control-label"></label>
+                <input asp-for="ТекущиеСчета.ПроцентнаяСтавка" class="form-control" />
+                <span asp-validation-for="ТекущиеСчета.ПроцентнаяСтавка" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ТекущиеСчета.КапитализацияПроцентов" class="control-label"></label>
+                <input asp-for="ТекущиеСчета.КапитализацияПроцентов" class="form-control" />
+                <span asp-validation-for="ТекущиеСчета.КапитализацияПроцентов" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ТекущиеСчета.ДатаЗакрытия" class="control-label"></label>
+                <input asp-for="ТекущиеСчета.ДатаЗакрытия" class="form-control" />
+                <span asp-validation-for="ТекущиеСчета.ДатаЗакрытия" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

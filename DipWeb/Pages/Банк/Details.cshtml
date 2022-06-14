@@ -1,0 +1,67 @@
+﻿@page
+@model DipWeb.Pages.Банк.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>Банк</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Банк.Наименование)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Банк.Наименование)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Банк.КодБанка)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Банк.КодБанка)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Банк.УнпБанка)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Банк.УнпБанка)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Банк.БикБанка)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Банк.БикБанка)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Банк.РСчет)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Банк.РСчет)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Банк.ИдентификаторЮридическогоАдреса)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Банк.ИдентификаторЮридическогоАдреса)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Банк.ИдентификаторТелефона)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Банк.ИдентификаторТелефона)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Банк.Детали)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Банк.Детали)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Банк?.ИдентификаторБанка">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

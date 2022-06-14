@@ -1,0 +1,124 @@
+﻿@page
+@model DipWeb.Pages.Кредитование.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Удалить запись?</h3>
+<div>
+    <h4>Кредитование</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.НомерКредитногоДоговора)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.НомерКредитногоДоговора)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.ВидКредита)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.ВидКредита)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.ПроцентнаяСтавка)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.ПроцентнаяСтавка)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.Срок)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.Срок)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.ОбщаяСумма)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.ОбщаяСумма)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.СуммаЕжемесячныхПлатежей)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.СуммаЕжемесячныхПлатежей)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.ДатаОформления)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.ДатаОформления)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.ПериодПогашения)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.ПериодПогашения)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.КонечнаяДатаКредита)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.КонечнаяДатаКредита)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.СрокКредитнойЛинии)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.СрокКредитнойЛинии)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.Пеня)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.Пеня)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.ШтрафныеCанкции)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.ШтрафныеCанкции)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.Обеспечение)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.Обеспечение)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.СуммаОбеспечения)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.СуммаОбеспечения)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Кредитование.Статус)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Кредитование.Статус)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Кредитование.ИдентификаторКредитования" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться</a>
+    </form>
+</div>

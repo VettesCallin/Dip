@@ -1,0 +1,78 @@
+﻿@page
+@model DipWeb.Pages.Банк.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Банк[0].Наименование)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Банк[0].КодБанка)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Банк[0].УнпБанка)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Банк[0].БикБанка)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Банк[0].РСчет)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Банк[0].ИдентификаторЮридическогоАдреса)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Банк[0].ИдентификаторТелефона)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Банк[0].Детали)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Банк) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Наименование)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КодБанка)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.УнпБанка)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.БикБанка)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.РСчет)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоАдреса)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторТелефона)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Детали)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторБанка">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторБанка">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторБанка">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

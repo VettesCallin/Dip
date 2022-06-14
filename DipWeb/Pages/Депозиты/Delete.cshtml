@@ -1,0 +1,112 @@
+﻿@page
+@model DipWeb.Pages.Депозиты.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Удалить запись?</h3>
+<div>
+    <h4>Депозиты</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.ИдентификаторКодаВалюты)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.ИдентификаторКодаВалюты)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.ИдентификаторТекущегоСчета)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.ИдентификаторТекущегоСчета)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.ИдентификаторСчетаБПК)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.ИдентификаторСчетаБПК)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.Сумма)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.Сумма)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.ПроцентнаяСтавка)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.ПроцентнаяСтавка)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.КапитализацияПроцентов)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.КапитализацияПроцентов)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.ДатаОтрытия)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.ДатаОтрытия)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.СрокДействияДоговора)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.СрокДействияДоговора)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.ДатаОкончания)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.ДатаОкончания)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.СрокПополнения)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.СрокПополнения)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.Пролонгация)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.Пролонгация)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.ВозможностьДосрочногоЗакрытия)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.ВозможностьДосрочногоЗакрытия)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Депозиты.Отзывной)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Депозиты.Отзывной)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Депозиты.ИдентификаторДепозита" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться</a>
+    </form>
+</div>

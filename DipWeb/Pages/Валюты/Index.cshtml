@@ -1,0 +1,78 @@
+﻿@page
+@model DipWeb.Pages.Валюты.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Валюта[0].КодВалюты)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Валюта[0].Наименование)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Валюта[0].Страна)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Валюта[0].КурсНБ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Валюта[0].КурсБанкаПокупкиНал)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Валюта[0].КурсБанкаПокупкиБезнал)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Валюта[0].КурсБанкаПродажиНал)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Валюта[0].КурсБанкаПродажиБезнал)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Валюта) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.КодВалюты)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Наименование)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Страна)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КурсНБ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КурсБанкаПокупкиНал)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КурсБанкаПокупкиБезнал)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КурсБанкаПродажиНал)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КурсБанкаПродажиБезнал)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторКодаВалюты">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторКодаВалюты">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторКодаВалюты">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

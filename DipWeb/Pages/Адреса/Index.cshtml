@@ -1,0 +1,70 @@
+﻿@page
+@model DipWeb.Pages.Адреса.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Адреса[0].Страна)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Адреса[0].Область)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Адреса[0].Город)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Адреса[0].СтрокаАдреса)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Адреса[0].ПочтовыйИндекс)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Адреса[0].КодСОАТО)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Адреса[0].Детали)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Адреса) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Страна)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Область)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Город)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СтрокаАдреса)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПочтовыйИндекс)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КодСОАТО)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Детали)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторАдреса">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторАдреса">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторАдреса">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

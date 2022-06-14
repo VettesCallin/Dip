@@ -1,0 +1,100 @@
+﻿@page
+@model DipWeb.Pages.Переводы.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Удалить запись?</h3>
+<div>
+    <h4>Переводы</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.КонтрольныйНомер)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.КонтрольныйНомер)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.ИдентификаторСчетаБпкОтправителя)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.ИдентификаторСчетаБпкОтправителя)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.ИдентификаторСчетаБпкПолучателя)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.ИдентификаторСчетаБпкПолучателя)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.ИдентификаторТекущегоСчетаОтправителя)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.ИдентификаторТекущегоСчетаОтправителя)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.ИдентификаторТекущегоСчетаПолучателя)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.ИдентификаторТекущегоСчетаПолучателя)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.ВидПеревода)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.ВидПеревода)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.ИдентификаторКодаВалюты)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.ИдентификаторКодаВалюты)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.Сумма)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.Сумма)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.Комиссия)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.Комиссия)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.ДатаПеревода)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.ДатаПеревода)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Переводы.Статус)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Переводы.Статус)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Переводы.ИдентификаторПеревода" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться</a>
+    </form>
+</div>

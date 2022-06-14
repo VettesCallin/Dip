@@ -1,0 +1,84 @@
+﻿@page
+@model DipWeb.Pages.ВОО.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ВОО[0].ТипВОО)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ВОО[0].ИдентификаторЮридическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ВОО[0].ИдентификаторФизическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ВОО[0].ИдентификаторБанка)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ВОО[0].ИдентификаторКодаВалюты1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ВОО[0].ИдентификаторКодаВалюты2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ВОО[0].Сумма)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ВОО[0].Моржа)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ВОО[0].Дата)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ВОО) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ТипВОО)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторФизическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторБанка)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторКодаВалюты1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторКодаВалюты2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Сумма)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Моржа)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Дата)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторВОО">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторВОО">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторВОО">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

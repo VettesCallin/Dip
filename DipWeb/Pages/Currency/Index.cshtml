@@ -1,0 +1,86 @@
+﻿@page
+@model DipWeb.Pages.Валюты.IndexModel
+@{
+}
+
+@*<partial name="_Notification" />*@
+@if(TempData["success"]!=null) {
+	<h2>@TempData["success"]</h2>
+}
+
+<div class="container p-3">
+	<div class="row pt-4">
+		<div class="col-6">
+			<h2 class="text-primary">Список валют</h2>
+		</div>
+		<div class="col-6">
+			<a asp-page="create" class="btn btn-primary">
+				Добавить валюту
+			</a>
+		</div>
+	</div>
+
+	<br /><br />
+
+	<table class="table table-bordered table-striped" style="width:100%">
+		<thead>
+			<tr>
+				<th>
+					Идентификатор кода валюты
+				</th>
+				<th>
+					Код валюты
+				</th>
+				<th>
+					Наименование
+				</th>
+				<th>
+					Страна
+				</th>
+				<th>
+					Курс НБ
+				</th>
+				<th>
+					Курс банка покупки нал.
+				</th>
+				<th>
+					Курс банка покупки безнал.
+				</th>
+				<th>
+					Курс банка продажи нал.
+				</th>
+				<th>
+					Курс банка продажи безнал.
+				</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach(var obj in Model.Валюты)
+			{
+			<tr>
+				<td width="12%">@obj.ИдентификаторКодаВалюты</td>
+				<td width="12%">@obj.КодВалюты</td>
+				<td width="12%">@obj.Наименование</td>
+				<td width="12%">@obj.Страна</td>
+				<td width="12%">@obj.КурсНБ</td>
+				<td width="12%">@obj.КурсБанкаПокупкиНал</td>
+				<td width="12%">@obj.КурсБанкаПокупкиБезнал</td>
+				<td width="12%">@obj.КурсБанкаПродажиНал</td>
+				<td width="12%">@obj.КурсБанкаПродажиБезнал</td>
+				<td>
+					<div class="w-75 btn-group" role="group">
+					<a asp-page="Edit" asp-route-id="@obj.ИдентификаторКодаВалюты" class="btn btn-primary mx-2">
+						Редактировать
+					</a>
+					<a asp-page="Delete" asp-route-id="@obj.ИдентификаторКодаВалюты" class="btn btn-danger mx-2">
+						Удалить
+					</a>
+					</div>
+				</td>
+			</tr>
+			}
+
+		</tbody>
+	</table>
+</div>

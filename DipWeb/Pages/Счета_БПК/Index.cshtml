@@ -1,0 +1,78 @@
+﻿@page
+@model DipWeb.Pages.Счета_БПК.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.СчетаБПК[0].ИдентификаторЮридическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СчетаБПК[0].ИдентификаторФизическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СчетаБПК[0].ИдентификаторКодаВалюты)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СчетаБПК[0].ПроцентнаяСтавка)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СчетаБПК[0].Сумма)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СчетаБПК[0].КапитализацияПроцентов)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СчетаБПК[0].ДатаОткрытия)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.СчетаБПК[0].ДатаЗакрытия)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.СчетаБПК) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторФизическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторКодаВалюты)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПроцентнаяСтавка)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Сумма)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КапитализацияПроцентов)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаОткрытия)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаЗакрытия)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторСчетаБПК">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторСчетаБПК">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторСчетаБПК">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

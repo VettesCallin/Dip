@@ -1,0 +1,64 @@
+﻿@page
+@model DipWeb.Pages.Адреса.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>Адреса</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Адреса.Страна" class="control-label"></label>
+                <input asp-for="Адреса.Страна" class="form-control" />
+                <span asp-validation-for="Адреса.Страна" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Адреса.Область" class="control-label"></label>
+                <input asp-for="Адреса.Область" class="form-control" />
+                <span asp-validation-for="Адреса.Область" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Адреса.Город" class="control-label"></label>
+                <input asp-for="Адреса.Город" class="form-control" />
+                <span asp-validation-for="Адреса.Город" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Адреса.СтрокаАдреса" class="control-label"></label>
+                <input asp-for="Адреса.СтрокаАдреса" class="form-control" />
+                <span asp-validation-for="Адреса.СтрокаАдреса" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Адреса.ПочтовыйИндекс" class="control-label"></label>
+                <input asp-for="Адреса.ПочтовыйИндекс" class="form-control" />
+                <span asp-validation-for="Адреса.ПочтовыйИндекс" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Адреса.КодСОАТО" class="control-label"></label>
+                <input asp-for="Адреса.КодСОАТО" class="form-control" />
+                <span asp-validation-for="Адреса.КодСОАТО" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Адреса.Детали" class="control-label"></label>
+                <input asp-for="Адреса.Детали" class="form-control" />
+                <span asp-validation-for="Адреса.Детали" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

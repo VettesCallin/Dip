@@ -1,0 +1,100 @@
+﻿@page
+@model DipWeb.Pages.Платежи_3м_лицам.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<h4>Платежи_3м_лицам</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Платежи_3м_лицам.ИдентификаторПлатежа3мЛицам" />
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.ИдентификаторБПК" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.ИдентификаторБПК" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.ИдентификаторБПК" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.ИдентификаторЮридическогоЛица" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.ИдентификаторЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.ИдентификаторЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.НомерПлательщикаЕРИП" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.НомерПлательщикаЕРИП" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.НомерПлательщикаЕРИП" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.НомерУслугиЕРИП" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.НомерУслугиЕРИП" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.НомерУслугиЕРИП" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.НомерОперацииЕРИП" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.НомерОперацииЕРИП" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.НомерОперацииЕРИП" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.ИдентификаторКодаВалюты" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.ИдентификаторКодаВалюты" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.ИдентификаторКодаВалюты" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.Сумма" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.Сумма" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.Сумма" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.Комиссия" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.Комиссия" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.Комиссия" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.ДатаПлатежа" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.ДатаПлатежа" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.ДатаПлатежа" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.Назначение" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.Назначение" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.Назначение" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.ПолучательПлатежа" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.ПолучательПлатежа" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.ПолучательПлатежа" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.УнпПолучателя" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.УнпПолучателя" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.УнпПолучателя" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Платежи_3м_лицам.РСчетПолучателя" class="control-label"></label>
+                <input asp-for="Платежи_3м_лицам.РСчетПолучателя" class="form-control" />
+                <span asp-validation-for="Платежи_3м_лицам.РСчетПолучателя" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

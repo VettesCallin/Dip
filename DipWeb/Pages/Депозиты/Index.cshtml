@@ -1,0 +1,120 @@
+﻿@page
+@model DipWeb.Pages.Депозиты.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].ИдентификаторЮридическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].ИдентификаторФизическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].ИдентификаторКодаВалюты)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].ИдентификаторТекущегоСчета)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].ИдентификаторСчетаБПК)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].Сумма)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].ПроцентнаяСтавка)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].КапитализацияПроцентов)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].ДатаОтрытия)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].СрокДействияДоговора)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].ДатаОкончания)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].СрокПополнения)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].Пролонгация)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].ВозможностьДосрочногоЗакрытия)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Депозиты[0].Отзывной)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Депозиты) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторФизическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторКодаВалюты)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторТекущегоСчета)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторСчетаБПК)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Сумма)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ПроцентнаяСтавка)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КапитализацияПроцентов)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаОтрытия)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СрокДействияДоговора)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаОкончания)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СрокПополнения)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Пролонгация)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ВозможностьДосрочногоЗакрытия)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Отзывной)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторДепозита">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторДепозита">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторДепозита">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

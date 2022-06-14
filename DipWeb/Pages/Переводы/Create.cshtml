@@ -1,0 +1,94 @@
+﻿@page
+@model DipWeb.Pages.Переводы.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>Переводы</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Переводы.КонтрольныйНомер" class="control-label"></label>
+                <input asp-for="Переводы.КонтрольныйНомер" class="form-control" />
+                <span asp-validation-for="Переводы.КонтрольныйНомер" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.ИдентификаторСчетаБпкОтправителя" class="control-label"></label>
+                <input asp-for="Переводы.ИдентификаторСчетаБпкОтправителя" class="form-control" />
+                <span asp-validation-for="Переводы.ИдентификаторСчетаБпкОтправителя" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.ИдентификаторСчетаБпкПолучателя" class="control-label"></label>
+                <input asp-for="Переводы.ИдентификаторСчетаБпкПолучателя" class="form-control" />
+                <span asp-validation-for="Переводы.ИдентификаторСчетаБпкПолучателя" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.ИдентификаторТекущегоСчетаОтправителя" class="control-label"></label>
+                <input asp-for="Переводы.ИдентификаторТекущегоСчетаОтправителя" class="form-control" />
+                <span asp-validation-for="Переводы.ИдентификаторТекущегоСчетаОтправителя" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.ИдентификаторТекущегоСчетаПолучателя" class="control-label"></label>
+                <input asp-for="Переводы.ИдентификаторТекущегоСчетаПолучателя" class="form-control" />
+                <span asp-validation-for="Переводы.ИдентификаторТекущегоСчетаПолучателя" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.ИдентификаторЮридическогоЛица" class="control-label"></label>
+                <input asp-for="Переводы.ИдентификаторЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="Переводы.ИдентификаторЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="Переводы.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="Переводы.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.ВидПеревода" class="control-label"></label>
+                <input asp-for="Переводы.ВидПеревода" class="form-control" />
+                <span asp-validation-for="Переводы.ВидПеревода" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.ИдентификаторКодаВалюты" class="control-label"></label>
+                <input asp-for="Переводы.ИдентификаторКодаВалюты" class="form-control" />
+                <span asp-validation-for="Переводы.ИдентификаторКодаВалюты" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.Сумма" class="control-label"></label>
+                <input asp-for="Переводы.Сумма" class="form-control" />
+                <span asp-validation-for="Переводы.Сумма" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.Комиссия" class="control-label"></label>
+                <input asp-for="Переводы.Комиссия" class="form-control" />
+                <span asp-validation-for="Переводы.Комиссия" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.ДатаПеревода" class="control-label"></label>
+                <input asp-for="Переводы.ДатаПеревода" class="form-control" />
+                <span asp-validation-for="Переводы.ДатаПеревода" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Переводы.Статус" class="control-label"></label>
+                <input asp-for="Переводы.Статус" class="form-control" />
+                <span asp-validation-for="Переводы.Статус" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

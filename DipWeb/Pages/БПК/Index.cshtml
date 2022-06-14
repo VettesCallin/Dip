@@ -1,0 +1,120 @@
+﻿@page
+@model DipWeb.Pages.БПК.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].ВидПлатежнойСистемы)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].ВидБПК)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].ИдентификаторСчетаБПК)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].ИдентификаторКодаВалюты)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].СрокДействия)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].НомерКарты)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].НаименованиеОрганизации)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].ДанныеДержателя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].КодCVV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].PIN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].ДатаDыпуска)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].ДатаИстечения)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].БонуснаяПрограмма)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].Заготовка)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.БПК[0].Состояние)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.БПК) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ВидПлатежнойСистемы)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ВидБПК)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторСчетаБПК)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторКодаВалюты)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.СрокДействия)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерКарты)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НаименованиеОрганизации)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДанныеДержателя)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КодCVV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PIN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаDыпуска)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ДатаИстечения)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.БонуснаяПрограмма)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Заготовка)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Состояние)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторБПК">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторБПК">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторБПК">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

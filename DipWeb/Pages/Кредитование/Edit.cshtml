@@ -1,0 +1,115 @@
+﻿@page
+@model DipWeb.Pages.Кредитование.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<h4>Кредитование</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Кредитование.ИдентификаторКредитования" />
+            <div class="form-group">
+                <label asp-for="Кредитование.НомерКредитногоДоговора" class="control-label"></label>
+                <input asp-for="Кредитование.НомерКредитногоДоговора" class="form-control" />
+                <span asp-validation-for="Кредитование.НомерКредитногоДоговора" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.ИдентификаторЮридическогоЛица" class="control-label"></label>
+                <input asp-for="Кредитование.ИдентификаторЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="Кредитование.ИдентификаторЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="Кредитование.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="Кредитование.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.ВидКредита" class="control-label"></label>
+                <input asp-for="Кредитование.ВидКредита" class="form-control" />
+                <span asp-validation-for="Кредитование.ВидКредита" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.ПроцентнаяСтавка" class="control-label"></label>
+                <input asp-for="Кредитование.ПроцентнаяСтавка" class="form-control" />
+                <span asp-validation-for="Кредитование.ПроцентнаяСтавка" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.Срок" class="control-label"></label>
+                <input asp-for="Кредитование.Срок" class="form-control" />
+                <span asp-validation-for="Кредитование.Срок" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.ОбщаяСумма" class="control-label"></label>
+                <input asp-for="Кредитование.ОбщаяСумма" class="form-control" />
+                <span asp-validation-for="Кредитование.ОбщаяСумма" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.СуммаЕжемесячныхПлатежей" class="control-label"></label>
+                <input asp-for="Кредитование.СуммаЕжемесячныхПлатежей" class="form-control" />
+                <span asp-validation-for="Кредитование.СуммаЕжемесячныхПлатежей" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.ДатаОформления" class="control-label"></label>
+                <input asp-for="Кредитование.ДатаОформления" class="form-control" />
+                <span asp-validation-for="Кредитование.ДатаОформления" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.ПериодПогашения" class="control-label"></label>
+                <input asp-for="Кредитование.ПериодПогашения" class="form-control" />
+                <span asp-validation-for="Кредитование.ПериодПогашения" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.КонечнаяДатаКредита" class="control-label"></label>
+                <input asp-for="Кредитование.КонечнаяДатаКредита" class="form-control" />
+                <span asp-validation-for="Кредитование.КонечнаяДатаКредита" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.СрокКредитнойЛинии" class="control-label"></label>
+                <input asp-for="Кредитование.СрокКредитнойЛинии" class="form-control" />
+                <span asp-validation-for="Кредитование.СрокКредитнойЛинии" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.Пеня" class="control-label"></label>
+                <input asp-for="Кредитование.Пеня" class="form-control" />
+                <span asp-validation-for="Кредитование.Пеня" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.ШтрафныеCанкции" class="control-label"></label>
+                <input asp-for="Кредитование.ШтрафныеCанкции" class="form-control" />
+                <span asp-validation-for="Кредитование.ШтрафныеCанкции" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.Обеспечение" class="control-label"></label>
+                <input asp-for="Кредитование.Обеспечение" class="form-control" />
+                <span asp-validation-for="Кредитование.Обеспечение" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.СуммаОбеспечения" class="control-label"></label>
+                <input asp-for="Кредитование.СуммаОбеспечения" class="form-control" />
+                <span asp-validation-for="Кредитование.СуммаОбеспечения" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Кредитование.Статус" class="control-label"></label>
+                <input asp-for="Кредитование.Статус" class="form-control" />
+                <span asp-validation-for="Кредитование.Статус" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

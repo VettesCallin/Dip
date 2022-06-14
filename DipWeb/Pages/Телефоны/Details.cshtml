@@ -1,0 +1,55 @@
+﻿@page
+@model DipWeb.Pages.Телефоны.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>Телефон</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Телефон.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Телефон.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Телефон.Оператор)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Телефон.Оператор)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Телефон.КодCтраны)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Телефон.КодCтраны)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Телефон.КодОператора)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Телефон.КодОператора)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Телефон.НомерТелефона)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Телефон.НомерТелефона)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Телефон.Детали)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Телефон.Детали)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Телефон?.ИдентификаторТелефона">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

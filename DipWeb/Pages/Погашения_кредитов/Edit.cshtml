@@ -1,0 +1,60 @@
+﻿@page
+@model DipWeb.Pages.Погашения_кредитов.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<h4>ПогашенияКредитов</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ПогашенияКредитов.ИдентификаторПогашения" />
+            <div class="form-group">
+                <label asp-for="ПогашенияКредитов.ИдентификаторКредитования" class="control-label"></label>
+                <input asp-for="ПогашенияКредитов.ИдентификаторКредитования" class="form-control" />
+                <span asp-validation-for="ПогашенияКредитов.ИдентификаторКредитования" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ПогашенияКредитов.НомерКредитногоДоговора" class="control-label"></label>
+                <input asp-for="ПогашенияКредитов.НомерКредитногоДоговора" class="form-control" />
+                <span asp-validation-for="ПогашенияКредитов.НомерКредитногоДоговора" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ПогашенияКредитов.ИдентификаторЮридическогоЛица" class="control-label"></label>
+                <input asp-for="ПогашенияКредитов.ИдентификаторЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="ПогашенияКредитов.ИдентификаторЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ПогашенияКредитов.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="ПогашенияКредитов.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="ПогашенияКредитов.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ПогашенияКредитов.Сумма" class="control-label"></label>
+                <input asp-for="ПогашенияКредитов.Сумма" class="form-control" />
+                <span asp-validation-for="ПогашенияКредитов.Сумма" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ПогашенияКредитов.ДатаПлатежа" class="control-label"></label>
+                <input asp-for="ПогашенияКредитов.ДатаПлатежа" class="form-control" />
+                <span asp-validation-for="ПогашенияКредитов.ДатаПлатежа" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

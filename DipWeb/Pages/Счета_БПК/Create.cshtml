@@ -1,0 +1,69 @@
+﻿@page
+@model DipWeb.Pages.Счета_БПК.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>СчетаБПК</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="СчетаБПК.ИдентификаторЮридическогоЛица" class="control-label"></label>
+                <input asp-for="СчетаБПК.ИдентификаторЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="СчетаБПК.ИдентификаторЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="СчетаБПК.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="СчетаБПК.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="СчетаБПК.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="СчетаБПК.ИдентификаторКодаВалюты" class="control-label"></label>
+                <input asp-for="СчетаБПК.ИдентификаторКодаВалюты" class="form-control" />
+                <span asp-validation-for="СчетаБПК.ИдентификаторКодаВалюты" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="СчетаБПК.ПроцентнаяСтавка" class="control-label"></label>
+                <input asp-for="СчетаБПК.ПроцентнаяСтавка" class="form-control" />
+                <span asp-validation-for="СчетаБПК.ПроцентнаяСтавка" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="СчетаБПК.Сумма" class="control-label"></label>
+                <input asp-for="СчетаБПК.Сумма" class="form-control" />
+                <span asp-validation-for="СчетаБПК.Сумма" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="СчетаБПК.КапитализацияПроцентов" class="control-label"></label>
+                <input asp-for="СчетаБПК.КапитализацияПроцентов" class="form-control" />
+                <span asp-validation-for="СчетаБПК.КапитализацияПроцентов" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="СчетаБПК.ДатаОткрытия" class="control-label"></label>
+                <input asp-for="СчетаБПК.ДатаОткрытия" class="form-control" />
+                <span asp-validation-for="СчетаБПК.ДатаОткрытия" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="СчетаБПК.ДатаЗакрытия" class="control-label"></label>
+                <input asp-for="СчетаБПК.ДатаЗакрытия" class="form-control" />
+                <span asp-validation-for="СчетаБПК.ДатаЗакрытия" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

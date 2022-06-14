@@ -1,0 +1,74 @@
+﻿@page
+@model DipWeb.Pages.Юридические_лица.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>ЮридическиеЛица</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ЮридическиеЛица.ТипЮридическогоЛица" class="control-label"></label>
+                <input asp-for="ЮридическиеЛица.ТипЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="ЮридическиеЛица.ТипЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЮридическиеЛица.НаименованиеОрганизации" class="control-label"></label>
+                <input asp-for="ЮридическиеЛица.НаименованиеОрганизации" class="form-control" />
+                <span asp-validation-for="ЮридическиеЛица.НаименованиеОрганизации" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЮридическиеЛица.РуководительОрганизации" class="control-label"></label>
+                <input asp-for="ЮридическиеЛица.РуководительОрганизации" class="form-control" />
+                <span asp-validation-for="ЮридическиеЛица.РуководительОрганизации" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЮридическиеЛица.УНП" class="control-label"></label>
+                <input asp-for="ЮридическиеЛица.УНП" class="form-control" />
+                <span asp-validation-for="ЮридическиеЛица.УНП" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЮридическиеЛица.РСчет" class="control-label"></label>
+                <input asp-for="ЮридическиеЛица.РСчет" class="form-control" />
+                <span asp-validation-for="ЮридическиеЛица.РСчет" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЮридическиеЛица.ИдентификаторЮридическогоАдреса" class="control-label"></label>
+                <input asp-for="ЮридическиеЛица.ИдентификаторЮридическогоАдреса" class="form-control" />
+                <span asp-validation-for="ЮридическиеЛица.ИдентификаторЮридическогоАдреса" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЮридическиеЛица.ИдентификаторТелефона" class="control-label"></label>
+                <input asp-for="ЮридическиеЛица.ИдентификаторТелефона" class="form-control" />
+                <span asp-validation-for="ЮридическиеЛица.ИдентификаторТелефона" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЮридическиеЛица.ВидДеятельности" class="control-label"></label>
+                <input asp-for="ЮридическиеЛица.ВидДеятельности" class="form-control" />
+                <span asp-validation-for="ЮридическиеЛица.ВидДеятельности" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ЮридическиеЛица.Email" class="control-label"></label>
+                <input asp-for="ЮридическиеЛица.Email" class="form-control" />
+                <span asp-validation-for="ЮридическиеЛица.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,84 @@
+﻿@page
+@model DipWeb.Pages.Юридические_лица.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ЮридическиеЛица[0].ТипЮридическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЮридическиеЛица[0].НаименованиеОрганизации)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЮридическиеЛица[0].РуководительОрганизации)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЮридическиеЛица[0].УНП)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЮридическиеЛица[0].РСчет)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЮридическиеЛица[0].ИдентификаторЮридическогоАдреса)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЮридическиеЛица[0].ИдентификаторТелефона)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЮридическиеЛица[0].ВидДеятельности)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ЮридическиеЛица[0].Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ЮридическиеЛица) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ТипЮридическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НаименованиеОрганизации)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.РуководительОрганизации)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.УНП)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.РСчет)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторЮридическогоАдреса)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторТелефона)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ВидДеятельности)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторЮридическогоЛица">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторЮридическогоЛица">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторЮридическогоЛица">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

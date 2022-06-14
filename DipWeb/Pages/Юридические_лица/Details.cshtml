@@ -1,0 +1,73 @@
+﻿@page
+@model DipWeb.Pages.Юридические_лица.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>ЮридическиеЛица</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЮридическиеЛица.ТипЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЮридическиеЛица.ТипЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЮридическиеЛица.НаименованиеОрганизации)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЮридическиеЛица.НаименованиеОрганизации)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЮридическиеЛица.РуководительОрганизации)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЮридическиеЛица.РуководительОрганизации)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЮридическиеЛица.УНП)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЮридическиеЛица.УНП)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЮридическиеЛица.РСчет)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЮридическиеЛица.РСчет)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЮридическиеЛица.ИдентификаторЮридическогоАдреса)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЮридическиеЛица.ИдентификаторЮридическогоАдреса)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЮридическиеЛица.ИдентификаторТелефона)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЮридическиеЛица.ИдентификаторТелефона)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЮридическиеЛица.ВидДеятельности)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЮридическиеЛица.ВидДеятельности)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ЮридическиеЛица.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ЮридическиеЛица.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ЮридическиеЛица?.ИдентификаторЮридическогоЛица">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

@@ -1,0 +1,61 @@
+﻿@page
+@model DipWeb.Pages.Текущие_счета.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>ТекущиеСчета</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ТекущиеСчета.ИдентификаторЮридическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ТекущиеСчета.ИдентификаторЮридическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ТекущиеСчета.ИдентификаторФизическогоЛица)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ТекущиеСчета.ИдентификаторФизическогоЛица)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ТекущиеСчета.ИдентификаторКодаВалюты)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ТекущиеСчета.ИдентификаторКодаВалюты)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ТекущиеСчета.Сумма)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ТекущиеСчета.Сумма)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ТекущиеСчета.ПроцентнаяСтавка)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ТекущиеСчета.ПроцентнаяСтавка)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ТекущиеСчета.КапитализацияПроцентов)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ТекущиеСчета.КапитализацияПроцентов)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ТекущиеСчета.ДатаЗакрытия)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ТекущиеСчета.ДатаЗакрытия)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ТекущиеСчета?.ИдентификаторТекущегоСчета">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

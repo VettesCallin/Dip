@@ -1,0 +1,66 @@
+﻿@page
+@model DipWeb.Pages.Телефоны.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Телефон[0].ИдентификаторФизическогоЛица)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Телефон[0].Оператор)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Телефон[0].КодCтраны)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Телефон[0].КодОператора)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Телефон[0].НомерТелефона)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Телефон[0].Детали)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Телефон) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ИдентификаторФизическогоЛица)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Оператор)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КодCтраны)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.КодОператора)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.НомерТелефона)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Детали)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ИдентификаторТелефона">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ИдентификаторТелефона">Детали</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ИдентификаторТелефона">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

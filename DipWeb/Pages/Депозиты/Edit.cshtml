@@ -1,0 +1,105 @@
+﻿@page
+@model DipWeb.Pages.Депозиты.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<h4>Депозиты</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Депозиты.ИдентификаторДепозита" />
+            <div class="form-group">
+                <label asp-for="Депозиты.ИдентификаторЮридическогоЛица" class="control-label"></label>
+                <input asp-for="Депозиты.ИдентификаторЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="Депозиты.ИдентификаторЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Депозиты.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="Депозиты.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="Депозиты.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Депозиты.ИдентификаторКодаВалюты" class="control-label"></label>
+                <input asp-for="Депозиты.ИдентификаторКодаВалюты" class="form-control" />
+                <span asp-validation-for="Депозиты.ИдентификаторКодаВалюты" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Депозиты.ИдентификаторТекущегоСчета" class="control-label"></label>
+                <input asp-for="Депозиты.ИдентификаторТекущегоСчета" class="form-control" />
+                <span asp-validation-for="Депозиты.ИдентификаторТекущегоСчета" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Депозиты.ИдентификаторСчетаБПК" class="control-label"></label>
+                <input asp-for="Депозиты.ИдентификаторСчетаБПК" class="form-control" />
+                <span asp-validation-for="Депозиты.ИдентификаторСчетаБПК" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Депозиты.Сумма" class="control-label"></label>
+                <input asp-for="Депозиты.Сумма" class="form-control" />
+                <span asp-validation-for="Депозиты.Сумма" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Депозиты.ПроцентнаяСтавка" class="control-label"></label>
+                <input asp-for="Депозиты.ПроцентнаяСтавка" class="form-control" />
+                <span asp-validation-for="Депозиты.ПроцентнаяСтавка" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Депозиты.КапитализацияПроцентов" class="control-label"></label>
+                <input asp-for="Депозиты.КапитализацияПроцентов" class="form-control" />
+                <span asp-validation-for="Депозиты.КапитализацияПроцентов" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Депозиты.ДатаОтрытия" class="control-label"></label>
+                <input asp-for="Депозиты.ДатаОтрытия" class="form-control" />
+                <span asp-validation-for="Депозиты.ДатаОтрытия" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Депозиты.СрокДействияДоговора" class="control-label"></label>
+                <input asp-for="Депозиты.СрокДействияДоговора" class="form-control" />
+                <span asp-validation-for="Депозиты.СрокДействияДоговора" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Депозиты.ДатаОкончания" class="control-label"></label>
+                <input asp-for="Депозиты.ДатаОкончания" class="form-control" />
+                <span asp-validation-for="Депозиты.ДатаОкончания" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Депозиты.СрокПополнения" class="control-label"></label>
+                <input asp-for="Депозиты.СрокПополнения" class="form-control" />
+                <span asp-validation-for="Депозиты.СрокПополнения" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Депозиты.Пролонгация" /> @Html.DisplayNameFor(model => model.Депозиты.Пролонгация)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Депозиты.ВозможностьДосрочногоЗакрытия" /> @Html.DisplayNameFor(model => model.Депозиты.ВозможностьДосрочногоЗакрытия)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Депозиты.Отзывной" /> @Html.DisplayNameFor(model => model.Депозиты.Отзывной)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

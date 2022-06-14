@@ -1,0 +1,61 @@
+﻿@page
+@model DipWeb.Pages.Адреса.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>Адреса</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Адреса.Страна)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Адреса.Страна)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Адреса.Область)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Адреса.Область)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Адреса.Город)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Адреса.Город)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Адреса.СтрокаАдреса)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Адреса.СтрокаАдреса)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Адреса.ПочтовыйИндекс)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Адреса.ПочтовыйИндекс)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Адреса.КодСОАТО)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Адреса.КодСОАТО)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Адреса.Детали)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Адреса.Детали)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Адреса?.ИдентификаторАдреса">Изменить</a> |
+    <a asp-page="./Index">Вернуться</a>
+</div>

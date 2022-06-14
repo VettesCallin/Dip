@@ -1,0 +1,112 @@
+﻿@page
+@model DipWeb.Pages.БПК.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Удалить запись?</h3>
+<div>
+    <h4>БПК</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.ВидПлатежнойСистемы)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.ВидПлатежнойСистемы)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.ВидБПК)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.ВидБПК)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.ИдентификаторСчетаБПК)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.ИдентификаторСчетаБПК)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.ИдентификаторКодаВалюты)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.ИдентификаторКодаВалюты)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.СрокДействия)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.СрокДействия)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.НомерКарты)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.НомерКарты)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.НаименованиеОрганизации)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.НаименованиеОрганизации)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.ДанныеДержателя)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.ДанныеДержателя)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.КодCVV)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.КодCVV)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.PIN)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.PIN)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.ДатаDыпуска)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.ДатаDыпуска)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.ДатаИстечения)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.ДатаИстечения)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.БонуснаяПрограмма)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.БонуснаяПрограмма)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.Заготовка)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.Заготовка)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.БПК.Состояние)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.БПК.Состояние)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="БПК.ИдентификаторБПК" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться</a>
+    </form>
+</div>

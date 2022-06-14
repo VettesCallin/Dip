@@ -1,0 +1,74 @@
+﻿@page
+@model DipWeb.Pages.ВОО.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>ВОО</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ВОО.ТипВОО" class="control-label"></label>
+                <input asp-for="ВОО.ТипВОО" class="form-control" />
+                <span asp-validation-for="ВОО.ТипВОО" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ВОО.ИдентификаторЮридическогоЛица" class="control-label"></label>
+                <input asp-for="ВОО.ИдентификаторЮридическогоЛица" class="form-control" />
+                <span asp-validation-for="ВОО.ИдентификаторЮридическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ВОО.ИдентификаторФизическогоЛица" class="control-label"></label>
+                <input asp-for="ВОО.ИдентификаторФизическогоЛица" class="form-control" />
+                <span asp-validation-for="ВОО.ИдентификаторФизическогоЛица" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ВОО.ИдентификаторБанка" class="control-label"></label>
+                <input asp-for="ВОО.ИдентификаторБанка" class="form-control" />
+                <span asp-validation-for="ВОО.ИдентификаторБанка" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ВОО.ИдентификаторКодаВалюты1" class="control-label"></label>
+                <input asp-for="ВОО.ИдентификаторКодаВалюты1" class="form-control" />
+                <span asp-validation-for="ВОО.ИдентификаторКодаВалюты1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ВОО.ИдентификаторКодаВалюты2" class="control-label"></label>
+                <input asp-for="ВОО.ИдентификаторКодаВалюты2" class="form-control" />
+                <span asp-validation-for="ВОО.ИдентификаторКодаВалюты2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ВОО.Сумма" class="control-label"></label>
+                <input asp-for="ВОО.Сумма" class="form-control" />
+                <span asp-validation-for="ВОО.Сумма" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ВОО.Моржа" class="control-label"></label>
+                <input asp-for="ВОО.Моржа" class="form-control" />
+                <span asp-validation-for="ВОО.Моржа" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ВОО.Дата" class="control-label"></label>
+                <input asp-for="ВОО.Дата" class="form-control" />
+                <span asp-validation-for="ВОО.Дата" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
